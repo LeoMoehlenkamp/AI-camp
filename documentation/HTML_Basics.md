@@ -480,7 +480,129 @@ Forms allow users to submit data to your website.
 ---
 
 > **Next Up:**  
-> We have one final lesson on **Semantic Elements & Layout** to complete your HTML basics before moving on to CSS.  
+> We have one final lesson on **Semantic Elements & Layout** to complete your HTML basics before moving on to CSS.<br><br>
+# 📚 Mini Lesson 6: Semantic Elements & Layout
+
+
+## 🧠 Concept
+
+- **Semantic HTML** uses meaningful tags to describe the role of content (not just how it looks).  
+- Improves **accessibility**, **SEO**, and **maintainability** of your pages.  
+- Browsers and assistive technologies (screen readers) rely on semantics to understand your page.
+
+---
+
+## 🔖 Key Semantic Elements
+
+| Element      | Purpose                                          |
+|--------------|--------------------------------------------------|
+| `<header>`   | Introductory content (logo, site title, nav)     |
+| `<nav>`      | Site or page navigation links                    |
+| `<main>`     | The primary content of the document (one per page) |
+| `<section>`  | Thematic grouping of content, with optional heading |
+| `<article>`  | Self-contained content (blog post, news article) |
+| `<aside>`    | Sidebar or tangential content (related links)    |
+| `<footer>`   | Footer content (copyright, contact, links)       |
+
+### ✏️ Examples
+
+```html
+<header>
+  <h1>My Site Title</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <h2>Article Title</h2>
+    <p>Article content goes here.</p>
+  </article>
+
+  <aside>
+    <h3>Related</h3>
+    <ul>
+      <li><a href="#">Related link 1</a></li>
+      <li><a href="#">Related link 2</a></li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <p>© 2025 Your Name</p>
+</footer>
+```
+
+---
+
+## 📄 Basic Page Layout Skeleton
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic Layout Example</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <!-- site title, logo, nav -->
+  </header>
+
+  <nav>
+    <!-- main navigation links -->
+  </nav>
+
+  <main>
+    <section>
+      <!-- section content with heading -->
+    </section>
+    <section>
+      <!-- another section -->
+    </section>
+  </main>
+
+  <aside>
+    <!-- sidebar or related content -->
+  </aside>
+
+  <footer>
+    <!-- footer content -->
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+## 🧹 Basic Rules
+
+- Only **one** `<main>` per page.  
+- Place `<nav>` inside `<header>` or right after it.  
+- Use `<section>` for distinct groups within `<main>`, each with its own heading.  
+- Use `<article>` for self-contained pieces that could stand alone.  
+- Use `<aside>` for content related but not central to the main flow.  
+- Keep `<footer>` at the bottom with global info.
+
+---
+
+## 🎯 Task
+
+1. Add this lesson to `/docs/html-basics.md` under a new **“Semantic Elements & Layout”** section.  
+2. Create `lesson6.html` that uses at least:
+   - `<header>` with a site title and navigation.
+   - `<main>` containing two `<section>` blocks.
+   - One `<aside>` sidebar.
+   - A `<footer>` with copyright or contact info.
+3. Open `lesson6.html` in your browser (or via Live Server) and verify the semantic structure appears and you can inspect tags in DevTools.
+
 
 
 
