@@ -91,14 +91,7 @@ A browser (like Chrome or Firefox) reads your HTML and knows:
 </body>
 </html>
 ```
-✅ This is enough for the browser to load and show something!
-
-
-
-
-
-
-
+✅ This is enough for the browser to load and show something!<br><br>
 
 ---
 
@@ -194,4 +187,300 @@ A browser (like Chrome or Firefox) reads your HTML and knows:
    - Three paragraphs of placeholder text.  
    - One bulleted list and one numbered list.
 
-Save and open it in your browser (or via Live Server) to verify your structure renders correctly.
+Save and open it in your browser (or via Live Server) to verify your structure renders correctly.<br><br>
+
+---
+# 📚 Mini Lesson 3: Links & Images
+
+## 🧠 Concept
+
+- **Links** (anchors) let users navigate between pages or external websites.  
+- **Images** embed visual content; they need proper attributes for accessibility and responsiveness.
+
+---
+
+## 🔗 Links
+
+- Use the `<a>` tag with the `href` attribute to define the link target.  
+- Optional attributes:  
+  - `target="_blank"` opens the link in a new tab/window.  
+  - `title="…”` shows a tooltip on hover.  
+  - For security, when using `target="_blank"`, add `rel="noopener noreferrer"`.
+
+### ✏️ Examples
+
+```html
+<!-- Internal link to another page in your site -->
+<a href="lesson1.html">Go to Lesson 1</a>
+
+<!-- External link opening in a new tab -->
+<a href="https://example.com" target="_blank" rel="noopener noreferrer" title="Visit Example.com">
+  Visit Example.com
+</a>
+```
+
+---
+
+## 🖼️ Images
+
+- Use the `<img>` tag with the `src` attribute to point to the image file.  
+- **Always** include an `alt="…”` attribute for accessibility.  
+- Optional attributes:  
+  - `width="..."` and `height="..."` to set size  
+  - `title="…”` to show a tooltip
+
+### ✏️ Examples
+
+```html
+<!-- Local image with alt text -->
+<img src="images/logo.png" alt="Company logo">
+
+<!-- External image with size and tooltip -->
+<img
+  src="https://via.placeholder.com/150"
+  alt="Placeholder image"
+  width="150"
+  height="150"
+  title="This is a placeholder graphic"
+/>
+```
+
+---
+
+## 🧹 Basic Rules
+
+- Always **close** your `<a>` tags and never leave `<img>` tags without an `alt` attribute.  
+- Use **quotation marks** around all attribute values.  
+- For accessibility and SEO, write **meaningful link text** (avoid “click here”).  
+- For external links, always add `rel="noopener noreferrer"` when using `target="_blank"`.
+
+---
+
+## 🎯 Task
+
+1. Add this lesson to `/docs/html-basics.md` under a new "**Links & Images**" section.  
+2. Create a simple HTML file (e.g., `lesson3.html`) that includes:  
+   - One internal link and one external link (use `target="_blank"` appropriately).  
+   - Two images (one local, one external) with proper `alt` and optional `title`, `width`, `height`.  
+
+Save and open it in your browser (or via Live Server) to verify everything renders correctly. <br><br>
+# 📚 Mini Lesson 4: Tables & Media Embeds
+
+## 🧠 Concept
+
+- **Tables** organize data into rows and columns, making structured information easy to read.  
+- **Media Embeds** incorporate rich content—audio, video, or external resources—directly into your page.
+
+---
+
+## 📊 Tables
+
+- Use `<table>` to start the table.  
+- Inside, define a `<tr>` (table row) for each row.  
+- Use `<th>` for header cells and `<td>` for regular data cells.  
+- Optionally use `<caption>` to add a title above the table.
+
+### ✏️ Example
+
+```html
+<table>
+  <caption>Monthly Sales</caption>
+  <tr>
+    <th>Month</th>
+    <th>Sales</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$5,000</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$6,200</td>
+  </tr>
+</table>
+```
+
+---
+
+## 🎥 Media Embeds
+
+### 🔉 Audio
+
+- Use `<audio>` with `controls` so the user can play/pause.  
+- `src` points to the audio file.
+
+#### Example
+
+```html
+<audio controls>
+  <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+```
+
+### 📺 Video
+
+- Use `<video>` with `controls` for play/pause/seek.  
+- Can include multiple `<source>` formats for compatibility.
+
+#### Example
+
+```html
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
+
+### 🌐 Iframe (External Content)
+
+- Use `<iframe>` to embed another webpage or service (maps, docs, etc.).  
+- Include `width`, `height`, and `src`.  
+- For security, consider `sandbox` and `loading="lazy"`.
+
+#### Example
+
+```html
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="Embedded YouTube Video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+```
+
+---
+
+## 🧹 Basic Rules
+
+- Always **close** table tags (`</table>`, `</tr>`, etc.).  
+- Use `<th>` only in the table header row.  
+- Provide meaningful `<caption>` text for accessibility.  
+- Include fallback text inside `<audio>`/`<video>` for unsupported browsers.  
+- When embedding with `<iframe>`, set a descriptive `title` and consider `sandbox` for security.
+
+---
+
+## 🎯 Task
+
+1. Add this lesson to `/docs/html-basics.md` under a new **“Tables & Media Embeds”** section.  
+2. Create a new HTML file (e.g., `lesson4.html`) that includes:  
+   - A table with at least 3 columns and 2 rows (plus a header and caption).  
+   - An audio player using a sample audio file URL.  
+   - A video player using a sample video URL.  
+   - An iframe embedding a YouTube video or another external page.  
+3. Open `lesson4.html` in your browser (or via Live Server) and verify that the table and all media render and controls work correctly.<br><br>
+
+# 📚 Mini Lesson 5: Forms & Inputs
+
+
+## 🧠 Concept
+
+Forms allow users to submit data to your website.  
+**Inputs** collect specific types of data (text, email, password, choices), and **buttons** send that data to a server or script.
+
+---
+
+## 📝 Form Elements
+
+- `<form>`: Container for form controls.  
+  - Attributes:  
+    - `action="URL"` – where data is sent  
+    - `method="get"` or `"post"` – how data is sent  
+
+- `<label>`: Describes an input.  
+  - Use `for="id"` to associate with `<input id="…">`, or wrap the `<input>` inside.  
+
+- `<input>`: Single-line field.  
+  - `type="text"`, `email`, `password`, `number`, `checkbox`, `radio`, `submit`, etc.  
+  - Must include `name="…"`.  
+  - Optional: `placeholder="…"`, `required`, `value="…"`.  
+
+- `<textarea>`: Multi-line text input.  
+  - Attributes: `name`, `rows`, `cols`, `placeholder`.  
+
+- `<select>` / `<option>`: Dropdown menu.  
+  - `<option value="…">Display</option>`.  
+
+- `<button>`: Clickable button.  
+  - `type="submit"`, `button`, `reset`.
+
+---
+
+### ✏️ Examples
+
+**Simple GET form:**
+
+```html
+<form action="/search" method="get">
+  <label for="query">Search:</label>
+  <input type="text" id="query" name="q" placeholder="Enter keyword" />
+  <button type="submit">Go</button>
+</form>
+```
+
+**Registration form with multiple inputs:**
+
+```html
+<form action="/register" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
+
+  <label>Password:</label>
+  <input type="password" name="password" />
+
+  <fieldset>
+    <legend>Gender:</legend>
+    <label><input type="radio" name="gender" value="male" /> Male</label>
+    <label><input type="radio" name="gender" value="female" /> Female</label>
+  </fieldset>
+
+  <label for="country">Country:</label>
+  <select id="country" name="country">
+    <option value="de">Germany</option>
+    <option value="us">USA</option>
+  </select>
+
+  <button type="submit">Register</button>
+</form>
+```
+
+---
+
+## 🧹 Basic Rules
+
+- Always include `name` attributes on inputs so data is sent.  
+- Use `<label>` for accessibility—clicking the label focuses the input.  
+- Choose the right `method`:  
+  - `GET` for non-sensitive queries (appears in URL),  
+  - `POST` for sensitive or large data.  
+- Use `required` to enforce mandatory fields.  
+- Group related controls with `<fieldset>` and `<legend>` for clarity.
+
+---
+
+## 🎯 Task
+
+1. Add this lesson to `/docs/html-basics.md` under a new **“Forms & Inputs”** section.  
+2. Create `lesson5.html` including:  
+   - A text input with `<label>` and `required`.  
+   - An email input.  
+   - A password input.  
+   - A set of radio buttons.  
+   - A `<select>` dropdown.  
+   - A submit `<button>`.  
+3. Open `lesson5.html` in your browser (or via Live Server) and verify you can fill the form and (if using `method="get"`) see the query string in the URL.
+
+---
+
+> **Next Up:**  
+> We have one final lesson on **Semantic Elements & Layout** to complete your HTML basics before moving on to CSS.  
+
+
+
