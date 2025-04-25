@@ -1,0 +1,22 @@
+:root {
+    --brand-blue: #007acc;
+    --text-color: #333;
+    --bg-light: #f9f9f9;
+    --font_family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font_size: 1rem;
+  }
+
+body {
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    }
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: red;
+    }
+
+.highlight {
+    	background-color: aqua;
+    }
