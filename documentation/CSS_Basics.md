@@ -297,6 +297,80 @@ h2 {
 3. Create `lesson3.html` that:
    - Links to `lesson3.css` in the `<head>`.  
    - Contains an `<h1>` and two `<p>` elements (one with `class="highlight"`).  
-4. Open `lesson3.html` in your browser (or via Live Server) and verify your typography and colors render as expected.  
+4. Open `lesson3.html` in your browser (or via Live Server) and verify your typography and colors render as expected.<br><br>
 
 
+# 📚 Mini Lesson 4: Layout with Flexbox
+
+
+## 🧠 Concept
+
+Flexbox is a one-dimensional CSS layout model that makes it easy to align and distribute space among items in a container—even when their size is unknown or dynamic.
+
+---
+
+## 🔄 Flex Container & Items
+
+- **display: flex;** turns a container into a flex context (row by default).  
+- **flex-direction:** row | row-reverse | column | column-reverse  
+- **justify-content:** align items along the main axis:  
+  - flex-start | center | flex-end | space-between | space-around | space-evenly  
+- **align-items:** align items along the cross axis:  
+  - stretch | flex-start | center | flex-end | baseline  
+- **gap:** define consistent spacing between flex items (e.g., `gap: 1rem;`).
+
+---
+
+### ✏️ Examples
+
+```css
+/* Flex container */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Flex items */
+.container .item {
+  flex: 1;               /* grow/shrink to fill space */
+  padding: 1rem;
+  background: #f0f0f0;
+  text-align: center;
+}
+```
+
+```html
+<div class="container">
+  <div class="item">Box A</div>
+  <div class="item">Box B</div>
+  <div class="item">Box C</div>
+</div>
+```
+
+---
+
+## 🧹 Basic Rules
+
+- Only **direct children** of a flex container become flex items.  
+- Use `flex: 1` (or `flex-grow`) to make items share available space.  
+- `align-self` on an item can override the container’s `align-items`.  
+- For vertical stacks, use `flex-direction: column`.  
+- Use `gap` instead of manual margins for even spacing.
+
+---
+
+## 🎯 Task
+
+1. Add this lesson to `/docs/css-basics.md` under a new **“Layout with Flexbox”** section.  
+2. Create `lesson4.css` with:  
+   - A `.container` class demonstrating `display: flex`, `justify-content`, `align-items`, and `gap`.  
+   - A `.item` class demonstrating `flex: 1` and some padding/background.  
+3. Create `lesson4.html` that:  
+   - Links to `lesson4.css` in the `<head>`.  
+   - Contains a `<div class="container">` with three `<div class="item">Box A</div>`, `<div class="item">Box B</div>`, and `<div class="item">Box C</div>`.  
+4. Open `lesson4.html` in your browser (or via Live Server) and verify:  
+   - The three boxes sit in a row, evenly spaced.  
+   - They stretch or shrink as you resize the viewport.

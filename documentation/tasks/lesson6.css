@@ -1,0 +1,13 @@
+.card {
+    box-shadow: 0 4px 10px rgba(159, 224, 5, 0.1);
+  }
+.button {
+    background-color: #007acc;
+    transition: background-color 0.3s ease;
+  }
+.button:hover {
+    background-color: #ff00221c;
+  }
+  h1::after {
+    content: " 🔥";
+  }

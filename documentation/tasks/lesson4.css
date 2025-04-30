@@ -1,0 +1,17 @@
+/* Flex container */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Flex items */
+  .container .item {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #333;
+    background: #aa0909;
+    text-align: center;
+  }
