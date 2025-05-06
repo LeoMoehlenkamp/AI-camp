@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafb;
+    color: #111827;
+  }
+  
+  header.hero {
+    text-align: center;
+    padding: 3rem 1rem 3rem;
+    background: #111827;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    background-color: #2563eb;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .start-button-section {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .start-button-section .button {
+    font-size: 1.25rem;
+    padding: 1rem 2.5rem;
+    background-color: #2563eb;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button-section .button:hover {
+    background-color: #1e40af;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background: #f3f4f6;
+    color: #4b5563;
+  }
+  
